@@ -1,23 +1,23 @@
-balance = 0; //initial balance
+balance = 1000; //initial balance
 
 function deposit(amount) {
-    balance += amount;
-    console.log("Deposited:", amount, " | New balance:", balance)
+  balance += amount;
+  console.log("Deposited:", amount, " | New balance:", balance);
 }
 
 function withdraw(amount) {
-    if (amount > balance) {
-      console.log("Insufficient funds! Available balance:", balance);
-    } else {
-      balance -= amount;
-      console.log("Withdrew: ", amount, " | New balance:", balance);
-    }
+  if (amount > balance) {
+    console.log("Insufficient funds! Available balance:", balance);
+  } else {
+    balance -= amount;
+    console.log("Withdrew: ", amount, " | New balance:", balance);
   }
-  
-  function checkBalance() {
-    console.log("Current balance:", balance);
-  }
-  
-  checkBalance();
-  deposit(100)
-  withdraw(50);
+}
+
+function checkBalance() {
+  console.log("Current balance:", balance);
+}
+
+checkBalance();
+withdraw(75);
+deposit(100);
